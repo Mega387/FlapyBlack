@@ -205,7 +205,6 @@ GameObject:
   m_Component:
   - component: {fileID: 346749700}
   - component: {fileID: 346749702}
-  - component: {fileID: 346749701}
   m_Layer: 0
   m_Name: Lost
   m_TagString: Untagged
@@ -228,19 +227,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 519420032}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &346749701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 346749699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 19177defa504cc147a19283a7d0e56ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetObject: {fileID: 346749699}
 --- !u!212 &346749702
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -303,6 +289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
+  - component: {fileID: 519420035}
   - component: {fileID: 519420029}
   - component: {fileID: 519420033}
   - component: {fileID: 519420034}
@@ -400,7 +387,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 032432d013de3f84ab025d235460831d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4.9
 --- !u!50 &519420034
 Rigidbody2D:
   serializedVersion: 4
@@ -428,6 +414,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &519420035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19177defa504cc147a19283a7d0e56ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetObject: {fileID: 346749699}
 --- !u!1001 &1088822154
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1004,7 +1003,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2046262059153354793, guid: b229a498b7df55b49bf7dbdc4d573f3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.36
+      value: -2.33
       objectReference: {fileID: 0}
     - target: {fileID: 2046262059153354793, guid: b229a498b7df55b49bf7dbdc4d573f3c, type: 3}
       propertyPath: m_LocalPosition.z
