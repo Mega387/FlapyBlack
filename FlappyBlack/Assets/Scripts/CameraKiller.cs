@@ -5,13 +5,16 @@ using UnityEngine;
 public class CameraKiller : MonoBehaviour
 {
     CameraMove cameramove;
+    EndSetActive EndSetActive;
     void OnBecameInvisible()
     {
         if (gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            
             CameraMove.PlayerDeath = true;
+            EndSetActive.isAllow = true;
             Debug.Log("Здох");
+            Destroy(gameObject);
         }
     }
 }
