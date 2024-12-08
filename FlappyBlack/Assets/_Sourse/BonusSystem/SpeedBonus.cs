@@ -7,7 +7,7 @@ namespace BonusSystem
 {
     public class SpeedBonus : MonoBehaviour
     {
-        [SerializeField] private float boostDuration = 5f;
+        [SerializeField] private float boostDuration = 2f;
         MovePlayer MovePlayer;
         CameraMove CameraMove;
 
@@ -16,7 +16,7 @@ namespace BonusSystem
             if (other.CompareTag("Player"))
             {
                 StartCoroutine(ApplySpeedBoost(other.gameObject));
-                StartCoroutine(DenySpeedBoost(other.gameObject,5f));
+                //StartCoroutine(DenySpeedBoost(other.gameObject,boostDuration));
                 Destroy(gameObject);
             }
         }
@@ -25,14 +25,19 @@ namespace BonusSystem
         {
             MovePlayer.moveSpeed += 4f;
             CameraMove.moveSpeed += 4f;
+            Debug.Log("Активировано");
 
             yield return new WaitForSeconds(boostDuration);
+
+            CameraMove.moveSpeed -= 5f;
+            MovePlayer.moveSpeed -= 5f;
         }
         private IEnumerator DenySpeedBoost(GameObject player, float delay)
         {
+            yield return new WaitForSeconds(boostDuration);
             CameraMove.moveSpeed -= 5f;
             MovePlayer.moveSpeed -= 5f;
-            yield return new WaitForSeconds(boostDuration);
+            
         }
     }
 }

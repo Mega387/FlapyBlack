@@ -53,7 +53,9 @@ namespace PlayerSystem
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0))
             {
                 Jump();
+                Debug.Log($"Скорость - {moveSpeed}");
             }
+            
         }
 
         void Jump()
