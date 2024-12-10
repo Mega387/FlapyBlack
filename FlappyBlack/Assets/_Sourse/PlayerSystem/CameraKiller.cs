@@ -15,7 +15,6 @@ namespace PlayerSystem
 
                 CameraMove.PlayerDeath = true;
                 EndSetActive.isAllow = true;
-                Debug.Log("Здох");
                 Destroy(gameObject);
             }
         }

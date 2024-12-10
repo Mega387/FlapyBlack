@@ -10,5 +10,9 @@ public class DestroyPlayerCollider : MonoBehaviour
         {
             Destroy(other.gameObject);
         }
+        if (other.CompareTag("boxtag"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

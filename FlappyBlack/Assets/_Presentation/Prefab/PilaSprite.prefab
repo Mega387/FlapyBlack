@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 1942764848739085379}
   - component: {fileID: 2242521437347576592}
   - component: {fileID: 45612868773425034}
+  - component: {fileID: 2473452509201526880}
   - component: {fileID: 9214233152602925227}
-  - component: {fileID: 2473035942738364329}
+  - component: {fileID: 4358128787801908441}
   m_Layer: 0
   m_Name: PilaSprite
-  m_TagString: Untagged
+  m_TagString: spin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +100,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dcd72e07339c83d429e4ae457a3fea05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2473452509201526880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372185680266387385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db0f4ddea3b7a9149b2f0646ff55645d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &9214233152602925227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,8 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
---- !u!68 &2473035942738364329
-EdgeCollider2D:
+--- !u!58 &4358128787801908441
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -127,8 +140,8 @@ EdgeCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
+    m_Bits: 64
+  m_LayerOverridePriority: 1
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -144,31 +157,6 @@ EdgeCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -9.526943, y: 0.044496357}
-  - {x: -10.562344, y: 3.5152194}
-  - {x: -7.6240044, y: 5.547882}
-  - {x: -6.795633, y: 8.988496}
-  - {x: -2.794734, y: 8.998212}
-  - {x: 0.0051323473, y: 11.18511}
-  - {x: 2.8949597, y: 8.796442}
-  - {x: 6.4287677, y: 9.014883}
-  - {x: 7.6016283, y: 5.4943013}
-  - {x: 10.642177, y: 3.4486148}
-  - {x: 9.478211, y: -0.055349335}
-  - {x: 10.768701, y: -3.253698}
-  - {x: 7.665485, y: -5.5674767}
-  - {x: 6.480463, y: -9.070983}
-  - {x: 2.8208904, y: -8.886701}
-  - {x: 0.022846222, y: -11.097273}
-  - {x: -3.0615096, y: -8.912268}
-  - {x: -6.656271, y: -8.918123}
-  - {x: -7.623844, y: -5.486229}
-  - {x: -10.576404, y: -3.6178682}
-  - {x: -9.487684, y: 0.106012344}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
+  m_Offset: {x: 0.30020726, y: 0}
+  serializedVersion: 2
+  m_Radius: 10.430193
