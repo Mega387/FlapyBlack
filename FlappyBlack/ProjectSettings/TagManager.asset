@@ -6,6 +6,7 @@ TagManager:
   tags:
   - boxtag
   - spin
+  - Stone
   layers:
   - Default
   - TransparentFX

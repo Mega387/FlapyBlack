@@ -8,6 +8,7 @@ namespace PlayerSystem
     {
         public static float moveSpeed = 5f;
         public static float jumpForce = 200f;
+        [SerializeField] private float boostSpeed = 2f;
         //private float initialMass;
         //private float increasedMass = 10f;
         private bool SpeedAllow = true;
@@ -40,6 +41,15 @@ namespace PlayerSystem
         {
             rb = GetComponent<Rigidbody2D>();
         }
+        public void IncreaseSpeed(float amount)
+        {
+            moveSpeed += amount;
+        }
+
+        public void DecreaseSpeed(float amount)
+        {
+            moveSpeed -= amount;
+        }
 
         void Update()
         {
@@ -55,7 +65,26 @@ namespace PlayerSystem
                 Jump();
                 Debug.Log($"Скорость - {moveSpeed}");
             }
-            
+
+
+            //буст (не бустрер)
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                moveSpeed += boostSpeed;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                moveSpeed -= boostSpeed;
+            }
+            //тест массы
+            if (Input.GetKeyDown(KeyCode.LeftControl))
+            {
+                rb.gravityScale += 3;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftControl))
+            {
+                rb.gravityScale -= 3;
+            }
         }
 
         void Jump()

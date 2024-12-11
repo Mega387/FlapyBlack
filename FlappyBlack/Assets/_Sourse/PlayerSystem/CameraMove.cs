@@ -13,7 +13,15 @@ namespace PlayerSystem
         {
             rb = GetComponent<Rigidbody2D>();
         }
+        public void IncreaseSpeed(float amount)
+        {
+            moveSpeed += amount;
+        }
 
+        public void DecreaseSpeed(float amount)
+        {
+            moveSpeed -= amount;
+        }
         void Update()
         {
             //if (PlayerDeath == false)

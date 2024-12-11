@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 8720349554675656449}
   - component: {fileID: 2484808334858634211}
   - component: {fileID: 2939368204386010233}
+  - component: {fileID: 743985777902446630}
   m_Layer: 6
   m_Name: Stone5 (2)
-  m_TagString: Untagged
+  m_TagString: Stone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,3 +288,15 @@ PolygonCollider2D:
       - {x: 3.35, y: -4.19}
       - {x: 3.47, y: -4.18}
   m_UseDelaunayMesh: 0
+--- !u!114 &743985777902446630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8665474559975287850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466ed5ef71a78fb469fe3bfe95d6a175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToGenerate: {fileID: 8969574364712868021}
-  generationDistance: 36
+  generationDistance: 52
   objectsInsidePrefab:
   - {fileID: 4206348390967804094}
   - {fileID: 5236196431839906444}
