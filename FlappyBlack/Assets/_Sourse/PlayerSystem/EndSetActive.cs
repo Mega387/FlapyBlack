@@ -11,14 +11,11 @@ namespace PlayerSystem
         public GameObject targetObject;
         void Update()
         {
-            CheckAndActivateObject();
+
         }
-        public void CheckAndActivateObject()
+        public void CheckAndActivateObject(bool checker)
         {
-            if (isAllow == true)
-            {
-                targetObject.SetActive(true);
-            }
+                targetObject.SetActive(checker);
         }
     }
 

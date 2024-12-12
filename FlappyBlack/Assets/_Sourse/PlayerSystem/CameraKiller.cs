@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace PlayerSystem
 {
     public class CameraKiller : MonoBehaviour
     {
+        private string sceneName = "Menu";
         CameraMove cameramove;
         EndSetActive EndSetActive;
         void OnBecameInvisible()
@@ -14,8 +16,9 @@ namespace PlayerSystem
             {
 
                 CameraMove.PlayerDeath = true;
-                EndSetActive.isAllow = true;
+                EndSetActive.CheckAndActivateObject(true);
                 Destroy(gameObject);
+                
             }
         }
     }

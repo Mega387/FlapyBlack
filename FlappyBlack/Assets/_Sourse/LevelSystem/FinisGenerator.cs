@@ -6,7 +6,7 @@ public class FinisGenerator : MonoBehaviour
 {
     public GameObject prefabToGenerate;
 
-    public float generationDistance = 2f;
+    public static float generationDistance = 2f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

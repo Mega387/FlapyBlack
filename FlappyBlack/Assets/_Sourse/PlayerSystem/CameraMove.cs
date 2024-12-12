@@ -34,7 +34,11 @@ namespace PlayerSystem
                 rb.constraints = RigidbodyConstraints2D.FreezePosition;
             }
             else
+            {
+                rb.constraints = RigidbodyConstraints2D.FreezePositionY;
                 Move();
+            }
+                
         }
         void Move()
         {

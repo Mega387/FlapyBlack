@@ -65,9 +65,6 @@ namespace PlayerSystem
                 Jump();
                 Debug.Log($"Скорость - {moveSpeed}");
             }
-
-
-            //буст (не бустрер)
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 moveSpeed += boostSpeed;
@@ -76,7 +73,7 @@ namespace PlayerSystem
             {
                 moveSpeed -= boostSpeed;
             }
-            //тест массы
+            //тест массы :)
             if (Input.GetKeyDown(KeyCode.LeftControl))
             {
                 rb.gravityScale += 3;
